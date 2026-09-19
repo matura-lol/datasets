@@ -8,6 +8,10 @@ Source PDFs (CKE/OKE arkusze) are **not** included, and neither are any images.
 Everything here is JSON, produced by the pipeline; large files are zstd
 (`.zst`) — `zstd -d <file>.zst` or `unzstd <file>.zst`.
 
+## Where the uncompressed data lives
+
+Everything in this repo is zstd-compressed where large. **Uncompressed copies of the same files are hosted on Kaggle** (the *matura.lol* datasets page) together with `figures/jev_topics_map.png`.
+
 ## Layout
 
 ```
@@ -99,14 +103,14 @@ flags. See https://github.com/matura-lol/Jev-categorise for the tooling.
 `group_id` is the discrete signature `subject/topic/method/difficulty/capability-bits`;
 questions sharing it are solved the same way.
 
-## Source & licence
+## Source & license
 
 The dataset (the compilation, the segmentation, and the model-derived metadata)
 is released under the **GNU Affero General Public License v3.0** — see
 [`LICENSE`](LICENSE).
 
 Individual pieces of **text** inside the data may be licensed differently and
-remain under their respective licences; the AGPL does not override them.
+remain under their respective licenses; the AGPL does not override them.
 In particular:
 
 - exam papers and marking schemes are public materials of the **Centralna
@@ -115,7 +119,7 @@ In particular:
 - question text, answers and worked solutions collected from third-party sites
   (odrabiamy, matematyka.org.pl, zadaniazmatur, matura-online, biologhelp,
   szybkiekorepetycje, maturazai and others) remain subject to those sites'
-  terms and licences;
+  terms and licenses;
 - the code that produced this data lives at
   https://github.com/matura-lol/Jev-categorise (MIT).
 

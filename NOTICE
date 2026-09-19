@@ -7,7 +7,7 @@ metadata (see jev/) — is licensed under the GNU Affero General Public License,
 version 3 (see LICENSE).
 
 It contains individual pieces of text that are licensed under different terms
-and remain under their respective licences; the AGPL does not override those.
+and remain under their respective licenses; the AGPL does not override those.
 Specifically:
 
 * Exam papers, tasks, answer keys and marking schemes originate from the public
@@ -16,7 +16,7 @@ Specifically:
 * Question text, answers and worked solutions collected from third-party
   websites (odrabiamy, matematyka.org.pl, zadaniazmatur, matura-online,
   biologhelp, szybkiekorepetycje, maturazai, and others) remain subject to the
-  terms and licences of those sites.
+  terms and licenses of those sites.
 * The model-derived tags, checks and groupings in jev/ are original output of
   the matura.lol pipeline.
 
