@@ -29,6 +29,29 @@ corpus/     segments.tar.zst — per-paper question segmentation
 jev/        TypeSafe Jev tagging outputs (see below)
 ```
 
+## How to navigate this repo
+
+* **Format.** Everything is JSON — either plain `.json`/`.jsonl` or zstd
+  compressed (`.zst`). To read a `.zst` file:
+  `zstd -d tags.jsonl.zst` (or `unzstd tags.jsonl.zst`). `jq` works on the
+  plain output; `pandas.read_json(path, lines=True)` reads the JSONL rows.
+* **The corpus.** The per-paper question segmentation is bundled as one archive:
+  `tar -I zstd -xf corpus/segments.tar.zst` produces `data/segments/*.json`,
+  one file per paper (the paper id from `corpus/inventory.json`).
+* **IDs are the join key.** Every question has an id of the form
+  `<paper-id>/zad/<number>` — the same id appears in `segments/`, in
+  `imports/*.json`, and in `jev/tags.jsonl` (`tags.jsonl.zst`). The
+  `imports/*.json` files map per-source enrichments (answers, solutions,
+  topics) onto those ids; `jev/*.jsonl` maps the Jev decisions onto them.
+* **Where each answer/solution comes from.** A question row carries
+  `answer_source` / `answer_text_source` / `solution_source` / `topics_source`
+  (values like `cke`, `odrabiamy`, `matematykaorg`, `maturazai`, `ai`,
+  `jev`) — see `imports/` per source.
+* **The Jev layer** is optional enrichment: join `jev/tags.jsonl.zst` by `id`
+  to get topic/difficulty/method/group, `jev/answer_checks.jsonl` for the
+  answer-fit signal, and `jev/mismatches.jsonl` + `jev/reassignments.jsonl`
+  for the flagged/repair rows.
+
 ## jev/
 
 Jev (System One) tags each question with typed decisions: the official
@@ -94,6 +117,6 @@ In particular:
   szybkiekorepetycje, maturazai and others) remain subject to those sites'
   terms and licences;
 - the code that produced this data lives at
-  https://github.com/matura-lol/Jev-categorise (AGPL-3.0).
+  https://github.com/matura-lol/Jev-categorise (MIT).
 
 If you reuse this data, credit [matura.lol](https://matura.lol) with a link.
