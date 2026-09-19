@@ -1,0 +1,26 @@
+matura.lol datasets — licensing notice
+
+SPDX-License-Identifier: AGPL-3.0-only
+
+The dataset as a whole — the compilation, the segmentation and the model-derived
+metadata (see jev/) — is licensed under the GNU Affero General Public License,
+version 3 (see LICENSE).
+
+It contains individual pieces of text that are licensed under different terms
+and remain under their respective licences; the AGPL does not override those.
+Specifically:
+
+* Exam papers, tasks, answer keys and marking schemes originate from the public
+  materials of the Centralna Komisja Egzaminacyjna (CKE) and the Okręgowe
+  Komisje Egzaminacyjne (OKE) and remain theirs.
+* Question text, answers and worked solutions collected from third-party
+  websites (odrabiamy, matematyka.org.pl, zadaniazmatur, matura-online,
+  biologhelp, szybkiekorepetycje, maturazai, and others) remain subject to the
+  terms and licences of those sites.
+* The model-derived tags, checks and groupings in jev/ are original output of
+  the matura.lol pipeline.
+
+The producing code is available at https://github.com/matura-lol/Jev-categorise
+and is licensed AGPL-3.0.
+
+Credit matura.lol (https://matura.lol) when you reuse this data.
