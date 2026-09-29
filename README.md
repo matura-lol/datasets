@@ -10,7 +10,7 @@ Everything here is JSON, produced by the pipeline; large files are zstd
 
 ## Where the uncompressed data lives
 
-Everything in this repo is zstd-compressed where large. **Uncompressed copies of the same files are hosted on Kaggle** ([matura.lol datasets](https://www.kaggle.com/datasets/maturalol/matura-lol-datasets/)) together with `figures/jev_vectors.png`.
+Everything in this repo is zstd-compressed where large. **Uncompressed copies of the same files are hosted on Hugging Face** ([matura.lol datasets](https://huggingface.co/datasets/matura-lol/matura.lol-datasets)) together with `figures/jev_vectors.png`.
 
 ## Layout
 
