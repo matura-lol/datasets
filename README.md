@@ -21,11 +21,13 @@ imports/    processed enrichments folded onto the corpus
             site_import.json        site problems + SVG solutions
             odrabiamy_import.json   answers/worked solutions (odrabiamy)
             matematykaorg_import.json
-            maturazai_import.json   AI answers/solutions
+            maturazai_import.json.zst AI answers/solutions
             zadaniazmatur_import.json
             maturaonline_import.json
             szybkiekorepetycje_import.json
             biologhelp_import.json  CKE marking schemes (bio/chem)
+            skul_import.json.zst    textbook exercises & solutions (skul.pl)
+            sprawnamatura_import.json worked math solutions & topics (sprawnamatura.pl)
             pytania_import.json
 sources/    raw scraped ledgers (one JSONL row per task/arkusz)
 corpus/     segments.tar.zst — per-paper question segmentation
@@ -118,7 +120,7 @@ In particular:
   and remain theirs;
 - question text, answers and worked solutions collected from third-party sites
   (odrabiamy, matematyka.org.pl, zadaniazmatur, matura-online, biologhelp,
-  szybkiekorepetycje, maturazai and others) remain subject to those sites'
+  szybkiekorepetycje, maturazai, skul, sprawnamatura and others) remain subject to those sites'
   terms and licenses;
 - the code that produced this data lives at
   https://github.com/matura-lol/Jev-categorise (MIT).
